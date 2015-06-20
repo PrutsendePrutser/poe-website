@@ -18,10 +18,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Login page", "Index", "Dashboard", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Dashboard<span class="sr-only">(current)</span></a></li>
+					<li><a href="http://www.pathofexile.com">Official PoE website</a></li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Personal info<span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Account settings</a></li>
+						<li><a href="#">Character list</a></li>
+						<li><a href="#">Saved builds</a></li>
+					  </ul>
+					</li>
                 </ul>
             </div>
         </div>
@@ -31,7 +41,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - PrutsendePrutser applications</p>
         </footer>
     </div>
 
