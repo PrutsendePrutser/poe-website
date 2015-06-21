@@ -1,64 +1,47 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
 <div class="bgr">
 
-	</div>
+</div>
 
-	<div class="main-container">
-		<div class="container-fluid">
-			<header class="header-wrapper">
-				<nav>
+<div class="main-container">
+	<div class="container-fluid">
+		<header class="header-wrapper">
+			<nav>
 
-				</nav>
-			</header>
+			</nav>
+		</header>
 
-			<div class="content one-column login">
-				<div class="row">
-					<div class="col-sm-4 col-sm-offset-4">
-						<div class="logo-land">
-							<img src="https://www.pathofexile.com/gen/image/YTozOntpOjA7aTowO2k6/MjthOjI6e3M6MjoiaWQi/O2k6MDtzOjQ6InNpemUi/O3M6NjoiYXZhdGFyIjt9/aToxO2k6MTt9/67521ca7c0/Path_of_Exile_Gallery_Image.jpg" />
+		<div class="content three-columns login">
+			<!-- Main container -->
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<!-- Inner container -->
+					<div class="row">
+						<!-- Left part of window, menu stuff -->
+						<div class="col-sm-3">
+								@Html.Partial("MenuPartial")
 						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4 col-sm-offset-4">
-						<div class="column login">
-							<em class="lead">Log in</em>
-							<br />
-							<form action="projectoverzicht.html" accept-charset="utf-8">
-								<div class="form-group">
-									<label class="sr-only" for="name">E-mail</label><p class="help-block"></p>
-									<input id="name" class="form-control" type="text" name="name" placeholder="E-mail" data-validation-required-message="Fill in your e-mail address here">
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="address">Wachtwoord</label><p class="help-block"></p>
-									<input id="address" class="form-control" type="text" name="address" placeholder="Password" data-validation-required-message="Fill in your password here">
-								</div>
-								<div class="validation-summary-errors" data-valmsg-summary="true">
-									<ul>
-										<li>The e-mail and/or password you entered is incorrect</li>
-									</ul>
-								</div>
-								<a href="projectoverzicht-newmenu-topr.html" class="btn btn-primary" type="submit">User</a>
-							</form>
-							<form action="password-reminder.html" accept-charset="utf-8">
-								<i class="small pass-reminder"><a href="#" data-parent="#accordion" data-target="#collapseForgotPass" data-toggle="collapse">Forgot password?</a></i>
-								<div class="form-group pass-reminder-field collapse" id="collapseForgotPass">
-									<label class="sr-only" for="address">E-mail</label><p class="help-block"></p>
-									<input id="address" class="form-control" type="text" name="address" placeholder="E-mail" required data-validation-required-message="Fill in your e-mail address here">
-									<div>
-										<button class="btn btn-primaryr" type="submit">Reset password</button>
-									</div>
-								</div>
-							</form>
+						
+						<!-- Main window for all the info and stuff -->
+						<div class="col-sm-7">
+							<div class="column login">
+								Main window stuff goes here
+							</div>
+						</div>
+							
+
+						<!-- Right part of window, summary of info, save/edit options? -->
+						<div class="col-sm-2">
+							<div class="column login">
+								Summary stuff goes here
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
+		 </div>
 	</div>
-
+</div>
