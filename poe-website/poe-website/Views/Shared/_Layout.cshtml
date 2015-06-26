@@ -39,13 +39,30 @@
 
     <div class="container-fluid body-content">
         @RenderBody()
+
+	
+
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - PrutsendePrutser applications</p>
         </footer>
     </div>
 
+	
+
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+	<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+	<script src="~/Scripts/script.js"></script>
+
+	<div class="modal fade" id="modalPopUp" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1500;">
+        <div class="modal-dialog  modal-lg modal-huge">
+            <div class="modal-content" id="modalPopUpContent">
+                <div class="modal-body">
+                    <div id="ModalContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

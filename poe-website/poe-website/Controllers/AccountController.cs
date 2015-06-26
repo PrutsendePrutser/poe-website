@@ -1,4 +1,5 @@
-﻿using System;
+﻿using poe_website.Models.Account;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,5 +15,12 @@ namespace poe_website.Controllers
         {
             return View();
         }
+
+		[HttpGet]
+		public ActionResult Create()
+		{
+			var model = new RegisterModel();
+			return PartialView(model);
+		}
 	}
 }

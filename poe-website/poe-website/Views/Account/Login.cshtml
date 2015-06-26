@@ -43,6 +43,15 @@
 									</ul>
 								</div>
 								<a href="/Dashboard/Index" class="btn btn-primary" type="submit">User</a>
+								@Ajax.Bootstrap().ActionLink("Create account", "Create", "Account",
+									new AjaxOptions{
+										UpdateTargetId = "modalPopUpContent",
+										HttpMethod = "GET",
+										OnBegin = "OpenCreateDialog()",
+										OnFailure = "NewOptionFailure()",
+										InsertionMode = InsertionMode.Replace
+									})
+								
 							</form>
 							<form action="password-reminder.html" accept-charset="utf-8">
 								<i class="small pass-reminder"><a href="#" data-parent="#accordion" data-target="#collapseForgotPass" data-toggle="collapse">Forgot password?</a></i>

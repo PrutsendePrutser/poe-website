@@ -1,0 +1,41 @@
+﻿@model poe_website.Models.Account.RegisterModel
+
+@{
+	Layout = "~/Views/Shared/_AjaxLayout.cshtml";
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h2 class="modal-title" id="myModalLabel">Create account</h2>
+</div>
+
+@using (Ajax.BeginForm("Create", "Account", new { }, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "modalPopUpContent", OnComplete = "AjaxUserSuccess", OnFailure = "NewOptionFailure" }, new  {@class="form-horizontal"}))
+{
+    <div class="modal-body clearfix">
+		<div class="standardbox">
+			<div class="contentbox">
+	
+
+				@Html.AntiForgeryToken()
+
+				<div class="form-group">
+					@Html.Bootstrap().LabelFor(m => m.Name).ShowRequiredStar(true).Class("col-sm-3")
+					<div class="col-sm-9">
+						@Html.Bootstrap().TextBoxFor(m => m.Name).Class("form-control").ShowValidationMessage(true).AutoFocus()
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					@Html.Bootstrap().LabelFor(m => m.Email).ShowRequiredStar(true).Class("col-sm-3")
+					<div class="col-sm-9">
+						@Html.Bootstrap().TextBoxFor(m => m.Email).Class("form-control").ShowValidationMessage(true)
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="modal-footer">
+		<a href="/Dashboard/Index" class="btn btn-lg btn-primary pull-right">Confirm account</a>
+    </div>
+}
