@@ -1,0 +1,8 @@
+﻿@model poe_website.Models.Dashboard.CharacterOverviewModel
+
+<h4>@Model.AccountName</h4>
+
+
+<div class="item-list">
+	@Html.DisplayFor(m => m.CharacterList, "Character/DisplayTemplates/CharacterOverviewDisplayModel")
+</div>

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model poe_website.Models.Dashboard.DashboardModel
+
+@{
     ViewBag.Title = "Index";
 }
 
@@ -28,7 +30,8 @@
 						<!-- Main window for all the info and stuff -->
 						<div class="col-sm-7">
 							<div class="column login">
-								Main window stuff goes here
+								Main window stuff goes here<br />
+								@Html.Partial("CharacterOverview", Model.CharacterOverview)
 							</div>
 						</div>
 							
