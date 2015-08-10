@@ -8,5 +8,6 @@ namespace poe_website.Models.Dashboard
 	public class DashboardModel
 	{
 		public CharacterOverviewModel CharacterOverview { get; set; }
+		public RedditFeedOverviewModel RedditOverView { get; set; }
 	}
 }

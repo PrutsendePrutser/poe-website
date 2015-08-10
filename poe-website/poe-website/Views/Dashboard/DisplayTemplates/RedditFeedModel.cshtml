@@ -1,0 +1,7 @@
+﻿@model poe_website.Models.Pagefeed.RedditFeedModel
+
+<div class="row rowitem">
+	<div class="col-xs-2">@Html.DisplayFor(m => m.Rating)</div>
+	<div class="col-xs-3">@Html.DisplayFor(m => m.UserName)</div>
+	<div class="col-xs-7"><a href="@Model.PermaUrl" target="_blank">@Model.MessageContent</a></div>
+</div>

@@ -12,11 +12,16 @@ namespace poe_website.Services.Impl
 		[Dependency]
 		public ICharacterService CharacterService { get; set; }
 
+		[Dependency]
+		public IPageFeedService PageFeedService { get; set; }
+
 		public DashboardModel GetDashboard()
 		{
 			var model = new DashboardModel
 			{
-				CharacterOverview = CharacterService.GetCharactersForOverview("PrutsendePrutser")
+				CharacterOverview = CharacterService.GetCharactersForOverview("PrutsendePrutser"),
+				RedditOverView = PageFeedService.GetRedditFeed()
+				
 			};
 			return model;
 		}
